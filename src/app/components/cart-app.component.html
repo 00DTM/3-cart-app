@@ -1,7 +1,8 @@
 <h2>Catálogo de productos</h2>
 <app-catalog [products]="products" (productEventEmitter)="onAddCart($event)"/>
 @if (items.length>0) {
-    <app-cart [items]="items" (idProductEventEmitter)="onDeleteCart($event)"></app-cart>
+    <app-cart [items]="items" (idProductEventEmitter)="onDeleteCart($event)"
+    [total]="total"></app-cart>
 }
 @else {
     <p class="alert alert-warning">No hay elementos en el carrito-</p>
