@@ -1,5 +1,6 @@
+<app-navbar [items]="items" (openEventEmitter)="setOpenCart()"></app-navbar>
+  <div class="container my-4">
 <h2>Catálogo de productos</h2>
-<button class="btn btn-info bnt-sm" (click)="setOpenCart()">Show cart ({{items.length}})</button>
 <div class="row">
     <div [className]="showCart?'col-9':'col'">
         <app-catalog [products]="products" (productEventEmitter)="onAddCart($event)"/>
@@ -20,3 +21,4 @@
 </div>
 
 
+</div>
